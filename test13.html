@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.write("로또번호 생성","<br>");
+        
+        var lotto=[];
+        
+        for(var i=0; i<6; i++){
+            lotto[i]=Math.floor(Math.random()*45)+1,"<br>"; 
+            document.write(i+"번:"+lotto+"<br>")
+            for (var j=0; j<i; j++){
+                if(lotto[j]==lotto[i]){
+                    i--;
+                }
+            }
+        } 
+        
+        
+/*        lotto.sort(function(a,b){
+            return a-b;
+        }); // 오름차순 정렬
+        document.write(lotto,"<br>");        
+        
+        lotto.sort(function(a,b){
+            return b-a;
+        }); // 내림차순 정렬*/
+        document.write(lotto,"<br>");
+
+    </script>
+</body>
+</html>
